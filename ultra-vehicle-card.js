@@ -119,7 +119,6 @@ _renderVehicleInfo() {
   
   switch(vehicle_type) {
     case 'EV':
-      console.log('rendering EV');
       return this._renderEVInfo();
     case 'Fuel':
       return this._renderFuelInfo();
@@ -148,7 +147,7 @@ _renderEVInfo() {
           <div class="progress ${isCharging ? 'charging' : ''}" style="width: ${batteryLevel}%;"></div>
           ${chargeLimit !== null ? html`
             <div class="charge-limit-indicator" style="left: ${chargeLimit}%;"></div>
-          ` : ''}
+          ` : 'No battery info!!!'}
         </div>
         <div class="level-text">
           <span>${batteryLevel}% ${isCharging ? 'Charging' : 'Charge'}</span>
