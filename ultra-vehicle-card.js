@@ -121,13 +121,14 @@ _renderVehicleInfo() {
   
   switch(vehicle_type) {
     case 'EV':
-      return this._renderEVInfo();
+//      return this._renderEVInfo();
+      return html`EV`;
     case 'Fuel':
       return this._renderFuelInfo();
     case 'Hybrid':
       return this._renderHybridInfo();
     default:
-      return html`Switch failed`;
+      return html``;
   }
 }
 
