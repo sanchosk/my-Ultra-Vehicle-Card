@@ -144,7 +144,7 @@ _renderEVInfo() {
   console.log("Show battery:");
   console.log(this.config.show_battery);
   console.log("Battery level entity:");
-  console.log(batteryLevelEntity);
+  console.log(this.config.battery_level_entity);
   
   return html`
     <div class="level-info">
