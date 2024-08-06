@@ -115,7 +115,7 @@ render() {
 }
 
 _renderVehicleInfo() {
-  const vehicle_type = this.config.vehicle_type;
+  const { vehicle_type } = this.config;
   console.log('Vehicle type:');
   console.log(vehicle_type);
   
