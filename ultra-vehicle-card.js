@@ -116,6 +116,8 @@ render() {
 
 _renderVehicleInfo() {
   const vehicle_type = this.config.vehicle_type;
+  console.log('Vehicle type:');
+  console.log(vehicle_type);
   
   switch(vehicle_type) {
     case 'EV':
