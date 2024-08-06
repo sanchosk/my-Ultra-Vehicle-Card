@@ -116,11 +116,9 @@ render() {
 
 _renderVehicleInfo() {
   const { vehicle_type } = this.config;
-  console.log('Vehicle type: ' + vehicle_type);
   
   switch(vehicle_type) {
     case 'EV':
-      console.log('Rendering EV');
       return this._renderEVInfo();
     case 'Fuel':
       return this._renderFuelInfo();
@@ -144,8 +142,8 @@ _renderEVInfo() {
   
   console.log("Show battery:");
   console.log(this.config.show_battery);
-  console.log("Battery level:");
-  console.log(batteryLevel);
+  console.log("Battery level entity:");
+  console.log(batteryLevelEntity);
   
   return html`
     <div class="level-info">
