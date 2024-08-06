@@ -127,7 +127,7 @@ _renderVehicleInfo() {
     case 'Hybrid':
       return this._renderHybridInfo();
     default:
-      return html``;
+      return html`Switch failed`;
   }
 }
 
