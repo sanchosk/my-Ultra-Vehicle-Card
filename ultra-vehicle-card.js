@@ -119,6 +119,7 @@ _renderVehicleInfo() {
   
   switch(vehicle_type) {
     case 'EV':
+      console.log('Render EV state');
       return this._renderEVInfo();
     case 'Fuel':
       return this._renderFuelInfo();
