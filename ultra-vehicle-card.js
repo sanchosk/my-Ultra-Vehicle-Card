@@ -139,7 +139,12 @@ _renderEVInfo() {
   const batteryRange = batteryRangeEntity ? Math.round(parseFloat(batteryRangeEntity.state)) : null;
   const isCharging = chargingStatusEntity && chargingStatusEntity.state.toLowerCase() === 'charging';
   const chargeLimit = chargeLimitEntity && this.config.show_charge_limit ? parseFloat(chargeLimitEntity.state) : null;
-
+  
+  console.log("Show battery:");
+  console.log(this.config.show_battery);
+  console.log("Battery level:");
+  console.log(batteryLevel);
+  
   return html`
     <div class="level-info">
       ${this.config.show_battery && batteryLevel !== null ? html`
