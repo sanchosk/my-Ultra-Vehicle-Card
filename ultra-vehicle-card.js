@@ -126,9 +126,9 @@ _renderEVInfo() {
             <span>${batteryLevel}% ${isCharging ? 'Charging' : 'Charge'}</span>
             ${this.config.show_battery_range && batteryRange !== null ? html`
               <span class="range"
-               @click="${() => this._fireEvent('hass-more-info', batteryRangeEntity)}
               >
               <!-- adding click here -->
+               @click="${() => this._fireEvent('hass-more-info', batteryRangeEntity)}
               ${batteryRange} ${this.config.unit_type}</span>
             ` : ''}
           </div>
