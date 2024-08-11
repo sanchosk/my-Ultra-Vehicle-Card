@@ -125,7 +125,7 @@ _renderEVInfo() {
           <div class="level-text">
             <span>${batteryLevel}% ${isCharging ? 'Charging' : 'Charge'}</span>
             ${this.config.show_battery_range && batteryRange !== null ? html`
-              <span class="range">${batteryRange} ${this.config.unit_type}</span>
+              <span class="range" @click="${() => this._handleIconClick(batteryRangeEntity, 'more-info')}>${batteryRange} ${this.config.unit_type}</span>
             ` : ''}
           </div>
         ` : this.config.show_battery_range && batteryRange !== null ? html`
