@@ -129,7 +129,7 @@ _renderEVInfo() {
             ` : ''}
           </div>
         ` : this.config.show_battery_range && batteryRange !== null ? html`
-          <div class="level-text">
+          <div class="level-text" @click="${() => this._handleIconClick(batteryRangeEntity, 'more-info')}>
             <span class="range" style="float: right;">${batteryRange} ${this.config.unit_type}</span>
           </div>
         ` : ''}
@@ -246,6 +246,7 @@ _renderHybridInfo() {
       </div>
     ` : this.config.show_battery_range && range !== null ? html`
       <div class="level-text">
+      <!-- here I need to add action to click on the range and show history -->
         <span class="range" style="float: right;">${range} ${this.config.unit_type}</span>
       </div>
     ` : ''}
